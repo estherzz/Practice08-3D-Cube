@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .box {
+            width: 200px;
+            height: 200px;
+            position: relative;
+            transform-style: preserve-3d;
+            margin: 200px auto;
+            animation: zhuan 3s linear infinite;
+        }
+
+        @keyframes zhuan {
+            from {
+                transform: rotateX(0deg) rotateY(0deg);
+            }
+
+            to {
+                transform: rotateX(360deg) rotateY(360deg);
+
+            }
+        }
+
+        @keyframes open1 {
+            from {
+                transform: translateZ(100px);
+            }
+
+            to {
+                transform: translateZ(200px);
+            }
+        }
+
+        @keyframes open2 {
+            from {
+                transform: translateZ(-100px);
+            }
+
+            to {
+                transform: translateZ(-200px);
+            }
+        }
+
+        @keyframes open3 {
+            from {
+                transform: translateY(-100px) rotateX(90deg);
+            }
+
+            to {
+                transform: translateY(-200px) rotateX(90deg);
+            }
+        }
+
+        @keyframes open4 {
+            from {
+                transform: translateY(100px) rotateX(90deg);
+            }
+
+            to {
+                transform: translateY(200px) rotateX(90deg);
+            }
+        }
+
+        @keyframes open5 {
+            from {
+                transform: translateX(-100px) rotateY(90deg);
+            }
+
+            to {
+                transform: translateX(-200px) rotateY(90deg);
+            }
+        }
+
+        @keyframes open6 {
+            from {
+                transform: translateX(100px) rotateY(90deg);
+            }
+
+            to {
+                transform: translateX(200px) rotateY(90deg);
+            }
+        }
+
+        .box>div {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+
+        .forward {
+            animation: open1 1s linear infinite alternate;
+            background: rgba(202, 132, 132, 0.479);
+        }
+
+        .back {
+            animation: open2 1s linear infinite alternate;
+            background: rgba(132, 202, 173, 0.479);
+        }
+
+        .top {
+            animation: open3 1s linear infinite alternate;
+            background: rgba(202, 132, 132, 0.479);
+        }
+
+        .bottom {
+            animation: open4 1s linear infinite alternate;
+            background: rgba(132, 154, 202, 0.479);
+        }
+
+        .left {
+            animation: open5 1s linear infinite alternate;
+            background: rgba(182, 132, 202, 0.479);
+        }
+
+        .right {
+            animation: open6 1s linear infinite alternate;
+            background: rgba(202, 132, 165, 0.479);
+        }
+
+
+        .ball .o {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .ball .o:first-child {
+            transform: translate(-50%, -50%) rotateY(40deg);
+            background: rgba(0, 255, 255, 0.459);
+        }
+
+        .ball .o:nth-child(2) {
+            transform: translate(-50%, -50%) rotateY(80deg);
+            background: rgba(0, 255, 149, 0.459);
+        }
+
+        .ball .o:nth-child(3) {
+            transform: translate(-50%, -50%) rotateY(120deg);
+            background: rgba(157, 255, 0, 0.459);
+        }
+
+        .ball .o:nth-child(4) {
+            background: rgba(255, 174, 0, 0.459);
+            transform: translate(-50%, -50%) rotateY(160deg);
+        }
+
+        .ball .o:nth-child(5) {
+            background: rgba(255, 102, 0, 0.459);
+            transform: translate(-50%, -50%) rotateY(200deg);
+        }
+
+        .ball .o:nth-child(6) {
+            background: rgba(195, 0, 255, 0.459);
+            transform: translate(-50%, -50%) rotateY(240deg);
+        }
+
+        .ball .o:nth-child(7) {
+            background: rgba(255, 0, 55, 0.459);
+            transform: translate(-50%, -50%) rotateY(280deg);
+        }
+
+        .ball .o:nth-child(8) {
+            background: rgba(55, 0, 255, 0.459);
+            transform: translate(-50%, -50%) rotateY(320deg);
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="box">
+        <div class="ball">
+            <div class="o"></div>
+            <div class="o"></div>
+            <div class="o"></div>
+            <div class="o"></div>
+            <div class="o"></div>
+            <div class="o"></div>
+            <div class="o"></div>
+            <div class="o"></div>
+        </div>
+        <div class="forward">forward</div>
+        <div class="back">back</div>
+        <div class="top">top</div>
+        <div class="bottom">bottom</div>
+        <div class="left">left</div>
+        <div class="right">right</div>
+    </div>
+</body>
+
+</html>
